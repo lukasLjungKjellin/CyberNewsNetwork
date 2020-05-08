@@ -1,0 +1,64 @@
+// _searchNav.scss
+#navbar {
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
+	top: 0;
+	overflow: hidden;
+	background-color: $background;
+	a {
+		float: left;
+		color: $foreground;
+		display: block;
+		text-align: center;
+		text-decoration: none;
+		padding: 14px;
+		font-size: 17px;
+		&:hover {
+			background-color: $background;
+			color: black;
+		}
+		&.active {
+			background-color: green;
+			color: white;
+		}
+	}
+	input[type="text"] {
+		background-color: $foreground;
+		border: none;
+		padding: 6px;
+		font-size: 17px;
+		margin-top: 8px;
+	}
+}
+.search-container {
+	float: right;
+	button {
+		float: right;
+		border: none;
+		cursor: pointer;
+		background: #EEC;
+		font-size: 17px;
+		margin-top: 8px;
+		margin-right: 16px;
+		padding: 6px 10px;
+		&:hover {
+			background: #ccc;
+		}
+	}
+}
+@media screen and (max-width: 600px) {
+	.search-container {
+		float: none;
+	}
+	#navbar a,
+	#navbar input[type="text"] {
+		display: block;
+		text-align: left;
+		margin: 0;
+		width: 100%;
+		padding: 4%;
+	}
+	.search-container button {
+		display: none;
+	}
+}
